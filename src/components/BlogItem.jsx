@@ -54,7 +54,7 @@ const BlogItem = ({
       category,
       id,
       likes,
-      comments: [...comments, { user: id, comment }],
+      comments: [...comments, { user: Number(localStorage.getItem("userid")), comment }],
     };
     const old = blogs.filter((blo) => blo.id !== okay.id);
     setBlogs([okay, ...old]);
